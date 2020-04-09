@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>“此电话号码无法用于进行验证”？解决Google 账户注册时中国手机号的验证问题</title>
+      <link href="/2020/04/09/google-register/"/>
+      <url>/2020/04/09/google-register/</url>
+      
+        <content type="html"><![CDATA[<h2 id="遇到问题"><a href="#遇到问题" class="headerlink" title="遇到问题"></a>遇到问题</h2><p>当你辛辛苦苦地准备好“网络环境”，准备注册Google 账户时…..</p><p>却被突如其来的提示无情地打断： <strong>“此电话号码无法用于进行验证”</strong></p><p>（无话可说。。。）</p><p><img src="notallow.png" alt=""></p><h2 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h2><blockquote><p><em>截至文章发布日期亲测有效…</em></p><p><em>梯子请自行解决…</em></p></blockquote><ol><li>准备浏览器：Google Chrome 或者 Microsoft Edge （新版）</li><li>在浏览器中打开设置 - 高级设置 - 语言，添加 “英语”</li><li>重新排序语言，把 “英语” 设置为首选（移到顶部）</li><li>在新标签页 打开 <a href="https://www.google.com/" target="_blank" rel="noopener">google.com</a>  (推荐使用 无痕窗口)，我们会发现网页语言变成了英文</li><li>按照正常步骤操作，此时 中国手机号码 也可以成功验证了！</li></ol><p><img src="success.png" alt=""></p><h2 id="温馨提示"><a href="#温馨提示" class="headerlink" title="温馨提示"></a>温馨提示</h2><p>注册成功后，为了<strong>减少账户被封禁的风险</strong>，建议：</p><ol><li>不要在多个设备频繁登录</li><li>登录时 ip 地址尽量减少变动（特别是国内公共梯子，ip都是共享的，很容易被google风控）</li><li>完善一些个人信息，比如上传头像，绑定手机等</li><li>多使用关联 google账户 的服务，比如 Gmail，Google play 等等。</li></ol><p>总之，<strong>不要</strong> 让自己的账户看起来像 <strong>“批量注册” 的 “机器人”</strong></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Technology </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Google </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>为Hexo博客仓库配置独立的Deploy Key（git）</title>
       <link href="/2020/03/23/Hexo-Deploy-Key-git/"/>
       <url>/2020/03/23/Hexo-Deploy-Key-git/</url>
