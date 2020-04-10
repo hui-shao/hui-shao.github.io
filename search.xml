@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>hexo-d-1</title>
+      <link href="/2020/04/09/hexo-d-1/"/>
+      <url>/2020/04/09/hexo-d-1/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> Category1 </category>
+          
+          <category> Category2 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Tag1 </tag>
+            
+            <tag> Tag2 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>“此电话号码无法用于进行验证”？解决Google 账户注册时中国手机号的验证问题</title>
       <link href="/2020/04/09/google-register/"/>
       <url>/2020/04/09/google-register/</url>
