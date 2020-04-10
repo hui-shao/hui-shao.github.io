@@ -5,14 +5,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>hexo-d-1 - Hui-Shao&#39;s Blog</title>
+    <title>不想使用全局用户？教你为Hexo博客单独配置指定的git用户 - Hui-Shao&#39;s Blog</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
 	<meta name="google-site-verification" content="eecWLo3qd26NBTOOhqbKFLr-LgtBv5GwajWyuBJUE8Q" />
 	<meta name="baidu-site-verification" content="Lfp8Bypcc6" />
     <meta name="keywords" content="hui,hui-shao,Blog,博客,技术,分享,"> 
-    <meta name="description" content="hui-shao的博客 创造与分享,"> 
+    <meta name="description" content="hui-shao的博客 创造与分享,起因众所周知，Hexo 博客在 deploy 时，默认使用的是 Git全局用户。近期因为个人需要，在一台PC上配置了多个 git账户（取消了全局用户设置），导致 执行 hexo d 时报错，提示需要,"> 
     <meta name="author" content="hui-shao"> 
     <link rel="alternative" href="atom.xml" title="Hui-Shao&#39;s Blog" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -59,7 +59,7 @@
     <div class="navigation animated fadeIn fast delay-1s">
         <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="http://hui-shao.github.io">
         <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle">hexo-d-1</h3>
+        <h3 class="subtitle">不想使用全局用户？教你为Hexo博客单独配置指定的git用户</h3>
         <div class="social">
             <!--        <div class="like-icon">-->
             <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -84,24 +84,24 @@
             animation-duration: 1.2s;
             background-image: 
                 radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-                url(http://domain.com/awesome.jpg) ">
+                url(/img/cover.jpg) ">
         </div>
         <div class="else">
             <p class="animated fadeInDown">
                 
-                <a href="/categories/Category1"><b>「
-                    </b>CATEGORY1<b> 」</b></a>
+                <a href="/categories/Technology"><b>「
+                    </b>TECHNOLOGY<b> 」</b></a>
                 
                 四月 09, 2020
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/2020/04/09/hexo-d-1/" title="hexo-d-1" class="">hexo-d-1</a>
+            <h3 class="post-title animated fadeInDown"><a href="/2020/04/09/hexo-d-1/" title="不想使用全局用户？教你为Hexo博客单独配置指定的git用户" class="">不想使用全局用户？教你为Hexo博客单独配置指定的git用户</a>
             </h3>
             
             <p class="post-count animated fadeInDown">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                    0
+                    1.5k
                 </span>
                 
                 
@@ -115,7 +115,7 @@
             </p>
             
             
-            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Tag1/" rel="tag">Tag1</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Tag2/" rel="tag">Tag2</a></li></ul>
+            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
             
         </div>
     </div>
@@ -136,12 +136,52 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            
+            <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>众所周知，Hexo 博客在 deploy 时，默认使用的是 Git全局用户。近期因为个人需要，在一台PC上配置了多个 git账户（取消了全局用户设置），导致 执行 <code>hexo d</code> 时报错，提示需要配置用户名。</p>
+<p>因此，我们需要  “为 Hexo 博客单独配置指定的 git 用户” 。不过网上的教程大部分都是设置全局用户的方法，在一番折腾之后，我终于找到了的解决方案，就此分享一下。</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>解决方法其实很简单：</p>
+<ol>
+<li><p>首先，打开hexo博客所在的本地文件夹</p>
+</li>
+<li><p>打开此目录下 <code>.deploy_git/.git/</code>  文件夹（.git 为隐藏目录）。另外需要注意，打开的一定是在 “.deploy_key” 目录下的 “.git” 文件夹，外层的 “.git” 文件夹与此无关，即使修改也没有作用。</p>
+</li>
+<li><p>用文本编辑器编辑该目录下的 <code>config</code> 文件，新增如下配置：</p>
+<pre><code class="tex">[user]
+    name = YourUserName
+    email = example@example.com</code></pre>
+<p>注意使用你自己的用户名和邮箱替换对应值</p>
+</li>
+<li><p>保存配置文件并退出.</p>
+</li>
+</ol>
+<p>大功告成</p>
+<h2 id="期间踩坑"><a href="#期间踩坑" class="headerlink" title="期间踩坑"></a>期间踩坑</h2><ol>
+<li><p>首先尝试了第一种方法，使用脚本解决，“在hexo deploy之前将全局user更改，deploy完成之后再将user改回。” 不过感觉不太完美</p>
+</li>
+<li><p>然后试了网上另一种方法，删除了 “.deploy_git” 目录，问题确实解决了，但是提交记录全没了（还好删之前有备份）</p>
+</li>
+<li><p>编辑 “config” 时，编辑成博客根目录下的 “.git/config” 导致修改不起效</p>
+</li>
+<li><p>修改了 博客根目录下 “_config.yml” 文件，在其中 <code>deploy</code>部分添加了如下配置：</p>
+<pre><code class="tex">name: YourUserName
+email: example@example.com</code></pre>
+<p>然而，Windows平台下这样做并没有什么用…（据说 Linux平台可以使用此方法）</p>
+</li>
+</ol>
+<p>p.s. 上述部分方法来自 Github 上 Hexo 项目的 <a href="https://github.com/hexojs/hexo/issues/2125" target="_blank" rel="noopener">issue #2125 能否hexo deploy 时指定git账户</a> </p>
+
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
                 data-autoplay="false">
-                <source type="audio/mpeg" src="http://domain.com/awesome.mp3">
+                <source type="audio/mpeg" src="">
             </audio>
+            
+            <ul id="audio-list" style="display:none">
+                
+                
+                <li title='0' data-url='/statics/Illusionary-Daytime.mp3'></li>
+                
+                    
+            </ul>
             
             
             
@@ -176,12 +216,19 @@
                 </div>
                 <ul>
                     <li><a href="/">4 <p>文章</p></a></li>
-                    <li><a href="/categories">4 <p>分类</p></a></li>
-                    <li><a href="/tags">8 <p>标签</p></a></li>
+                    <li><a href="/categories">2 <p>分类</p></a></li>
+                    <li><a href="/tags">6 <p>标签</p></a></li>
                 </ul>
             </div>
             
             
+            
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4>目录</h4>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#起因"><span class="toc-number">1.</span> <span class="toc-text">起因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决方案"><span class="toc-number">2.</span> <span class="toc-text">解决方案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#期间踩坑"><span class="toc-number">3.</span> <span class="toc-text">期间踩坑</span></a></li></ol>
+                </div>
+            </div>
             
             
         </div>
