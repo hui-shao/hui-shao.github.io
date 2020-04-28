@@ -5,14 +5,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>不想使用全局用户？教你为Hexo博客单独配置指定的git用户 - Hui-Shao&#39;s Blog</title>
+    <title>Category: Jottings - Hui-Shao&#39;s Blog</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
 	<meta name="google-site-verification" content="eecWLo3qd26NBTOOhqbKFLr-LgtBv5GwajWyuBJUE8Q" />
 	<meta name="baidu-site-verification" content="Lfp8Bypcc6" />
     <meta name="keywords" content="hui,hui-shao,Blog,博客,技术,分享,"> 
-    <meta name="description" content="hui-shao的博客 创造与分享,起因众所周知，Hexo 博客在 deploy 时，默认使用的是 Git全局用户。近期因为个人需要，在一台PC上配置了多个 git账户（取消了全局用户设置），导致 执行 hexo d 时报错，提示需要,"> 
+    <meta name="description" content="hui-shao的博客 创造与分享,"> 
     <meta name="author" content="hui-shao"> 
     <link rel="alternative" href="atom.xml" title="Hui-Shao&#39;s Blog" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -52,73 +52,138 @@
     </div>
     <span id="config-title" style="display:none">Hui-Shao&#39;s Blog</span>
     <div id="loader"></div>
-    <div id="single">
-    <div class="scrollbar gradient-bg-rev"></div>
-<div id="top" style="display: block;">
-    <div class="bar" style="width: 0;"></div>
-    <div class="navigation animated fadeIn fast delay-1s">
-        <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="http://hui-shao.github.io">
-        <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle">不想使用全局用户？教你为Hexo博客单独配置指定的git用户</h3>
-        <div class="social">
-            <!--        <div class="like-icon">-->
-            <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
-            <!--        </div>-->
-            <div>
-                <div class="share">
-                    
-                        <a href="javascript:;" class="iconfont icon-share1"></a>
-                        <div class="share-component-cc" data-disabled="facebook,douban,linkedin,diandian,tencent,google"></div>
-                    
-                </div>
-            </div>
+    <div class="nav">
+    <ul id="menu-menu" class="menu">
+        
+        <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="/about/" title="ABOUT" external="false">ABOUT</a>
+        </li>
+        
+        <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="/categories/" title="CATEGORIES" external="false">CATEGORIES</a>
+        </li>
+        
+        <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="/tags/" title="TAGS" external="false">TAGS</a>
+        </li>
+        
+        <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="/archives/" title="ARCHIVES" external="false">ARCHIVES</a>
+        </li>
+        
+    </ul>
+    <p class="copyright" id="copyright">
+        &copy; 2020 hui-shao.
+        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        Theme <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
+    </p>
+</div>
+
+<div id="container">
+    
+<div class="search-box">
+    <form class="site-search-form">
+        <span class="iconfont icon-search"></span>
+        <input type="text" id="local-search-input" class="st-search-input" />
+        <div class="iconfont icon-cross search-box-close"></div>
+    </form>
+    <div class="search-scrollable">
+        <div id="local-search-result" class="local-search-result-cls" data-initialise="首次搜索，正在载入索引文件，请稍后……"
+            data-start="输入关键词搜索。" data-empty="没有找到内容，请尝试更换检索词。">
+            <span>输入关键词搜索。</span>
         </div>
     </div>
 </div>
-
-    <div class="section">
-        <div class=article-header-wrapper>
-    <div class="article-header">
-        <div class="article-cover animated fadeIn" style="
-            animation-delay: 600ms;
-            animation-duration: 1.2s;
-            background-image: 
-                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
-                url(/img/cover.jpg) ">
+<div id="header">
+    <div>
+        <div class="logo animated fadeInDown">
+            <img src="/img/favicon.png" alt="">
+            <a class="image-logo" href="/"></a>
         </div>
-        <div class="else">
-            <p class="animated fadeInDown">
-                
-                <a href="/categories/Technology"><b>「
-                    </b>TECHNOLOGY<b> 」</b></a>
-                
-                四月 09, 2020
-            </p>
-            <h3 class="post-title animated fadeInDown"><a href="/2020/04/09/hexo-d-1/" title="不想使用全局用户？教你为Hexo博客单独配置指定的git用户" class="">不想使用全局用户？教你为Hexo博客单独配置指定的git用户</a>
-            </h3>
+        <ul id="menu-menu" class="menu text-menu">
             
-            <p class="post-count animated fadeInDown">
-                
-                <span>
-                    <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                    1.5k
-                </span>
-                
-                
-                <span>
-                    <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                    1 mins.
-                </span>
-                
-                
-                
-            </p>
+            <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+                <a href="/about/" title="ABOUT" external="false" class="menu-link">ABOUT</a>
+            </li>
+            
+            <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+                <a href="/categories/" title="CATEGORIES" external="false" class="menu-link">CATEGORIES</a>
+            </li>
+            
+            <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+                <a href="/tags/" title="TAGS" external="false" class="menu-link">TAGS</a>
+            </li>
+            
+            <li class="animated fadeInDown menu-item menu-item-type-post_type menu-item-object-page">
+                <a href="/archives/" title="ARCHIVES" external="false" class="menu-link">ARCHIVES</a>
+            </li>
             
             
-            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+            <li class="animated fadeInDown search-bar iconfont icon-search"></li>
             
+        </ul>
+        <div class="iconfont icon-menu switchmenu gradient-text animated fadeInDown"></div>
+    </div>
+</div>
+<div id="screen">
+    <div id="mark">
+        <div class="cover animated fadeIn" style="
+            animation-delay: 900ms;
+            animation-duration: 2.8s;
+            background-image:
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.56), #100e17),
+                url(/img/cover.jpg);">
         </div>
     </div>
+    
+    <div id="post0" class="else">
+        <p class="animated fadeInDown">
+            
+            <a href="/categories/Jottings"><b>「
+                </b>JOTTINGS<b> 」</b></a>
+            
+            四月 28, 2020
+        </p>
+        <h3 class="post-title animated fadeInDown">
+            <a href="/2020/04/28/NetRed/" title="谈谈流量追捧之下的“网红”之风" class="posttitle">谈谈流量追捧之下的“网红”之风</a></h3>
+        
+        <p class="post-count animated fadeInDown">
+            
+            <span>
+                <b class="iconfont icon-text2"></b> <i>文章字数</i>
+                1.5k
+            </span>
+            
+            
+            <span>
+                <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
+                1 mins.
+            </span>
+            
+            
+        </p>
+        
+        
+        <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Comments/" rel="tag">Comments</a></li></ul>
+        
+        <div class="md-content animated fadeIn">
+            
+            <p style="text-indent:2em">
+互联网时代，“成名”的门槛不断降低。一方面，这给了更多人去接触世界、开拓视野的机会；然而另一方面，在“网红”圈子里也出现的种种现象也越来越引发我们的担忧。
+</p>
+
+<p style="text-indent:2em">
+近日，一位四年前因盗窃入狱的窃贼出狱时，竟引来三十多家网红公司竞相签约。仅仅因为多年前一席令人匪夷所思的话语，就差点成为了“网红”。这实在令人大跌眼镜，“感慨万千”：
+</p>
+
+<p style="text-indent:2em">
+如此一位文盲、窃贼，劣迹斑斑，不费吹灰之力，就有一堆人，将巨额钱财捧到眼前；而一个普通人寒窗十载，认真工作几十年，都无法触及这个数字。为什么别人不努力就能比自己拼命换来的生活还要好？这不...</p>
+            
+            <span class="read-more"><a href="/2020/04/28/NetRed/" title="查看全文" class="posttitle">查看全文</a>
+                <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
+    </div>
+    
 </div>
 
 <div class="screen-gradient-after">
@@ -126,117 +191,20 @@
         <div class="screen-gradient-content-inside">
             <div class="bold-underline-links screen-gradient-sponsor">
                 <p>
-                    <span class="animated fadeIn delay-1s"></span>
+                    <span class="typed-text"></span>
                 </p>
             </div>
         </div>
     </div>
 </div>
 
-<div class="article">
-    <div class='main'>
-        <div class="content markdown animated fadeIn">
-            <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>众所周知，Hexo 博客在 deploy 时，默认使用的是 Git全局用户。近期因为个人需要，在一台PC上配置了多个 git账户（取消了全局用户设置），导致 执行 <code>hexo d</code> 时报错，提示需要配置用户名。</p>
-<p>因此，我们需要  “为 Hexo 博客单独配置指定的 git 用户” 。不过网上的教程大部分都是设置全局用户的方法，在一番折腾之后，我终于找到了的解决方案，就此分享一下。</p>
-<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>解决方法其实很简单：</p>
-<ol>
-<li><p>首先，打开hexo博客所在的本地文件夹</p>
-</li>
-<li><p>打开此目录下 <code>.deploy_git/.git/</code>  文件夹（.git 为隐藏目录）。另外需要注意，打开的一定是在 “.deploy_key” 目录下的 “.git” 文件夹，外层的 “.git” 文件夹与此无关，即使修改也没有作用。</p>
-</li>
-<li><p>用文本编辑器编辑该目录下的 <code>config</code> 文件，新增如下配置：</p>
-<pre><code class="tex">[user]
-    name = YourUserName
-    email = example@example.com</code></pre>
-<p>注意使用你自己的用户名和邮箱替换对应值</p>
-</li>
-<li><p>保存配置文件并退出.</p>
-</li>
-</ol>
-<p>大功告成</p>
-<h2 id="期间踩坑"><a href="#期间踩坑" class="headerlink" title="期间踩坑"></a>期间踩坑</h2><ol>
-<li><p>首先尝试了第一种方法，使用脚本解决，“在hexo deploy之前将全局user更改，deploy完成之后再将user改回。” 不过感觉不太完美</p>
-</li>
-<li><p>然后试了网上另一种方法，删除了 “.deploy_git” 目录，问题确实解决了，但是提交记录全没了（还好删之前有备份）</p>
-</li>
-<li><p>编辑 “config” 时，编辑成博客根目录下的 “.git/config” 导致修改不起效</p>
-</li>
-<li><p>修改了 博客根目录下 “_config.yml” 文件，在其中 <code>deploy</code>部分添加了如下配置：</p>
-<pre><code class="tex">name: YourUserName
-email: example@example.com</code></pre>
-<p>然而，Windows平台下这样做并没有什么用…（据说 Linux平台可以使用此方法）</p>
-</li>
-</ol>
-<p>p.s. 上述部分方法来自 Github 上 Hexo 项目的 <a href="https://github.com/hexojs/hexo/issues/2125" target="_blank" rel="noopener">issue #2125 能否hexo deploy 时指定git账户</a> </p>
-
-            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
-            <audio id="audio" loop="1" preload="auto" controls="controls"
-                data-autoplay="false">
-                <source type="audio/mpeg" src="">
-            </audio>
-            
-            <ul id="audio-list" style="display:none">
-                
-                
-                <li title='0' data-url='/statics/Illusionary-Daytime.mp3'></li>
-                
-                    
-            </ul>
-            
-            
-            
-    <div id='gitalk-container' class="comment link"
-        data-ae='true'
-        data-ci='28e3ed95456fc7a75116'
-        data-cs='13ab3cb0370a4b5f6234d3e9cc2243f4bab00f57'
-        data-r='blog-comments'
-        data-o='hui-shao'
-        data-a='hui-shao'
-        data-d=''
-    >留言</div>
-
-
-            
-            
-        </div>
-        <div class="sidebar">
-            <div class="box animated fadeInRight">
-                <div class="subbox">
-                    <img src="https://avatars3.githubusercontent.com/u/31568606?s=200" height=300 width=300></img>
-                    <p>hui-shao</p>
-                    <span>Always believe that something wonderful is about to happen.</span>
-                    <dl>
-                        <dd><a href="https://github.com/hui-shao" target="_blank"><span
-                                    class=" iconfont icon-github"></span></a></dd>
-                        <dd><a href="" target="_blank"><span
-                                    class=" iconfont icon-twitter"></span></a></dd>
-                        <dd><a href="https://stackoverflow.com/users/13119393/hui-shao?tab=profile" target="_blank"><span
-                                    class=" iconfont icon-stack-overflow"></span></a></dd>
-                    </dl>
-                </div>
-                <ul>
-                    <li><a href="/">4 <p>文章</p></a></li>
-                    <li><a href="/categories">2 <p>分类</p></a></li>
-                    <li><a href="/tags">6 <p>标签</p></a></li>
-                </ul>
-            </div>
-            
-            
-            
-            <div class="box sticky animated fadeInRight faster">
-                <div id="toc" class="subbox">
-                    <h4>目录</h4>
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#起因"><span class="toc-number">1.</span> <span class="toc-text">起因</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决方案"><span class="toc-number">2.</span> <span class="toc-text">解决方案</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#期间踩坑"><span class="toc-number">3.</span> <span class="toc-text">期间踩坑</span></a></li></ol>
-                </div>
-            </div>
-            
-            
-        </div>
+    <div id="primary">
+        
     </div>
+    
 </div>
+<div id="preview"></div>
 
-    </div>
-</div>
     <div id="back-to-top" class="animated fadeIn faster">
         <div class="flow"></div>
         <span class="percentage animated fadeIn faster">0%</span>

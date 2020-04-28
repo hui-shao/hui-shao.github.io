@@ -5,14 +5,21 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Hello World - Hui-Shao&#39;s Blog</title>
+    <title>VPS部署 &amp; Centos 常用指令 - Hui-Shao&#39;s Blog</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
 	<meta name="google-site-verification" content="eecWLo3qd26NBTOOhqbKFLr-LgtBv5GwajWyuBJUE8Q" />
 	<meta name="baidu-site-verification" content="Lfp8Bypcc6" />
     <meta name="keywords" content="hui,hui-shao,Blog,博客,技术,分享,"> 
-    <meta name="description" content="hui-shao的博客 创造与分享,Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any pr,"> 
+    <meta name="description" content="hui-shao的博客 创造与分享,一般步骤
+安全性设置例如: 防火墙、SSH、SELinux
+安装建站环境可以用 宝塔面板 解决
+建站具体配置
+设置自动备份
+其他一些自己想干的事情
+
+常用指令系统信息与状态系统内存占用信息: fre,"> 
     <meta name="author" content="hui-shao"> 
     <link rel="alternative" href="atom.xml" title="Hui-Shao&#39;s Blog" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -59,7 +66,7 @@
     <div class="navigation animated fadeIn fast delay-1s">
         <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="http://hui-shao.github.io">
         <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle">Hello World</h3>
+        <h3 class="subtitle">VPS部署 & Centos 常用指令</h3>
         <div class="social">
             <!--        <div class="like-icon">-->
             <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -89,25 +96,25 @@
         <div class="else">
             <p class="animated fadeInDown">
                 
-                <a href="/categories/Others"><b>「
-                    </b>OTHERS<b> 」</b></a>
+                <a href="/categories/Technology"><b>「
+                    </b>TECHNOLOGY<b> 」</b></a>
                 
-                三月 20, 2020
+                四月 14, 2020
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/2020/03/20/hello-world/" title="Hello World" class="">Hello World</a>
+            <h3 class="post-title animated fadeInDown"><a href="/2020/04/14/vps-and-centos/" title="VPS部署 &amp; Centos 常用指令" class="">VPS部署 &amp; Centos 常用指令</a>
             </h3>
             
             <p class="post-count animated fadeInDown">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                    1.8k
+                    4k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                    2 mins.
+                    4 mins.
                 </span>
                 
                 
@@ -115,7 +122,7 @@
             </p>
             
             
-            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Others/" rel="tag">Others</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/hello-world/" rel="tag">hello world</a></li></ul>
+            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Centos/" rel="tag">Centos</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/VPS/" rel="tag">VPS</a></li></ul>
             
         </div>
     </div>
@@ -136,15 +143,85 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><pre><code class="bash">$ hexo new &quot;My New Post&quot;</code></pre>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><pre><code class="bash">$ hexo server</code></pre>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><pre><code class="bash">$ hexo generate</code></pre>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><pre><code class="bash">$ hexo deploy</code></pre>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+            <h2 id="一般步骤"><a href="#一般步骤" class="headerlink" title="一般步骤"></a>一般步骤</h2><ol>
+<li>安全性设置<br>例如: 防火墙、SSH、SELinux</li>
+<li>安装建站环境<br><em>可以用 宝塔面板 解决</em></li>
+<li>建站具体配置</li>
+<li>设置自动备份</li>
+<li>其他一些自己想干的事情</li>
+</ol>
+<h2 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h2><h3 id="系统信息与状态"><a href="#系统信息与状态" class="headerlink" title="系统信息与状态"></a>系统信息与状态</h3><p>系统内存占用信息: <code>free</code></p>
+<p>各种资源使用情况: <code>top</code></p>
+<ul>
+<li><code>-p [PID]</code> 用于指定进程</li>
+<li>按下 <code>H</code> 可以查看线程</li>
+</ul>
+<p>查看进程: <code>ps -ef</code></p>
+<ul>
+<li>最占内存的前10个进程：<code>ps -auxf | sort -nr -k 4 | head -10</code></li>
+<li>最占CPU的前10个进程：<code>ps -auxf | sort -nr -k 3 | head -10</code><br>查看打开的文件: <code>lsof</code></li>
+<li>用作查看80端口占用: <code>lsof -i :80</code></li>
+</ul>
+<p>清除历史命令: <code>history -c</code></p>
+<p>查看登录成功的记录: <code>last</code></p>
+<p>查看登录失败的记录: <code>lastb</code></p>
+<p>清除登陆系统成功的记录: <code>echo &gt; /var/log/wtmp</code></p>
+<p>清除登陆系统失败的记录: <code>echo &gt; /var/log/btmp</code></p>
+<p>查看系统信息:</p>
+<ul>
+<li><code>cat  /etc/redhat-release</code></li>
+<li><code>uname -a</code><h3 id="服务管理"><a href="#服务管理" class="headerlink" title="服务管理"></a>服务管理</h3>查看服务状态: <code>systemctl status xxx.service(服务名)</code></li>
+</ul>
+<p>启动/停止/重启 服务: <code>systemctl start/stop/restart xxx.service(服务名)</code></p>
+<p>设置/取消 开机自启: <code>systemctl enable/disable xxx.service(服务名)</code></p>
+<h3 id="Cron-自动化"><a href="#Cron-自动化" class="headerlink" title="Cron 自动化"></a>Cron 自动化</h3><p>查看任务列表：<code>crontab -l</code></p>
+<p>编辑任务列表：<code>crontab -e</code></p>
+<h3 id="防火墙篇"><a href="#防火墙篇" class="headerlink" title="防火墙篇"></a>防火墙篇</h3><p>查看防火墙状态：<code>firewall-cmd --state</code>或者 <code>systemctl status firewalld</code></p>
+<p>启动防火墙：<code>systemctl start firewalld.service</code></p>
+<p>禁止开机自启：<code>systemctl disable firewalld.service</code></p>
+<p>允许自启改用 <code>enable</code></p>
+<p>查看已经开放的端口：<code>firewall-cmd --list-ports</code></p>
+<p>开启端口：<code>firewall-cmd --zone=public --add-port=80/tcp --permanent</code><br>批量版：<code>firewall-cmd --zone=public --add-port=7001-7005/tcp --permanent</code></p>
+<p>命令含义：</p>
+<pre><code class="tex">–zone #作用域
+–add-port=80/tcp #添加端口，格式为：端口/通讯协议
+–permanent #永久生效，没有此参数重启后失效（注意最后修改玩重启下防火墙）</code></pre>
+<p>修改完记得重启防火墙:<code>firewall-cmd --reload</code></p>
+<p>另外注意 iptables 防火墙:<code>vim /etc/sysconfig/iptables</code></p>
+<h3 id="修改SSH登录"><a href="#修改SSH登录" class="headerlink" title="修改SSH登录"></a>修改SSH登录</h3><h4 id="改ssh端口："><a href="#改ssh端口：" class="headerlink" title="改ssh端口："></a>改ssh端口：</h4><ol>
+<li><p>确认防火墙已经放行</p>
+</li>
+<li><p><code>vim /etc/ssh/sshd_config</code></p>
+</li>
+<li><p>在#Port22下边新增</p>
+<p>Port 25536（这个是你需要改的新端口）</p>
+</li>
+<li><p>注意检查 SELinux 规则是否放行新增的端口</p>
+</li>
+<li><p>尝试使用新端口登陆。成功后封闭22端口（编辑文件 &amp;&amp; 重启服务）</p>
+</li>
+</ol>
+<h4 id="开启Public-Key登录："><a href="#开启Public-Key登录：" class="headerlink" title="开启Public Key登录："></a>开启Public Key登录：</h4><ol>
+<li><code>vim /etc/ssh/sshd_config</code><br>设置如下：<pre><code class="tex">PasswordAuthentication no #需要先有公钥私钥，否则登不上（先不修改以防万一）
+RSAAuthentication yes  #(可能没有)
+PubkeyAuthentication yes</code></pre>
+</li>
+<li>建立目录并设置权限 <code>mkdir -m 700 .ssh</code></li>
+<li>上传.pub文件到<code>~/.ssh/</code> 并重命名为 <code>authorized_keys</code><br>或者编辑 <code>authorized_keys</code> 写入公钥</li>
+<li>设置权限 <code>chmod 600 .ssh/authorized_keys</code></li>
+</ol>
+<h4 id="其他安全设置"><a href="#其他安全设置" class="headerlink" title="其他安全设置:"></a>其他安全设置:</h4><pre><code class="tex">LoginGraceTime 30
+PermitRootLogin no #禁止Root登陆，注意先添加用户以防万一。
+MaxAuthTries 3
+Protocol 2 #用ssh2更安全</code></pre>
+<p><strong>一切操作后记得重启ssh服务</strong>：<code>systemctl restart sshd</code></p>
+<h3 id="SELinux-相关"><a href="#SELinux-相关" class="headerlink" title="SELinux 相关:"></a>SELinux 相关:</h3><p>查看SELinux：<code>getenforce</code></p>
+<p>临时关闭SElinux：<code>setenforce 0</code></p>
+<p>永久关闭SELinux：</p>
+<ol>
+<li>编辑 <code>/etc/sysconfig/selinux</code></li>
+<li>将其中<code>SELINUX=enforcing</code> 改为 <code>SELINUX=disabled</code></li>
+</ol>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
@@ -203,7 +280,7 @@
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>目录</h4>
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一般步骤"><span class="toc-number">1.</span> <span class="toc-text">一般步骤</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#常用指令"><span class="toc-number">2.</span> <span class="toc-text">常用指令</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#系统信息与状态"><span class="toc-number">2.1.</span> <span class="toc-text">系统信息与状态</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#服务管理"><span class="toc-number">2.2.</span> <span class="toc-text">服务管理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Cron-自动化"><span class="toc-number">2.3.</span> <span class="toc-text">Cron 自动化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#防火墙篇"><span class="toc-number">2.4.</span> <span class="toc-text">防火墙篇</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#修改SSH登录"><span class="toc-number">2.5.</span> <span class="toc-text">修改SSH登录</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SELinux-相关"><span class="toc-number">2.6.</span> <span class="toc-text">SELinux 相关:</span></a></li></ol></li></ol>
                 </div>
             </div>
             

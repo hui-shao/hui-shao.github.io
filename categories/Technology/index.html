@@ -142,38 +142,49 @@
             <a href="/categories/Technology"><b>「
                 </b>TECHNOLOGY<b> 」</b></a>
             
-            四月 09, 2020
+            四月 14, 2020
         </p>
         <h3 class="post-title animated fadeInDown">
-            <a href="/2020/04/09/hexo-d-1/" title="不想使用全局用户？教你为Hexo博客单独配置指定的git用户" class="posttitle">不想使用全局用户？教你为Hexo博客单独配置指定的git用户</a></h3>
+            <a href="/2020/04/14/vps-and-centos/" title="VPS部署 &amp; Centos 常用指令" class="posttitle">VPS部署 &amp; Centos 常用指令</a></h3>
         
         <p class="post-count animated fadeInDown">
             
             <span>
                 <b class="iconfont icon-text2"></b> <i>文章字数</i>
-                1.5k
+                4k
             </span>
             
             
             <span>
                 <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
-                1 mins.
+                4 mins.
             </span>
             
             
         </p>
         
         
-        <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+        <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Centos/" rel="tag">Centos</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/VPS/" rel="tag">VPS</a></li></ul>
         
         <div class="md-content animated fadeIn">
             
-            <p>众所周知，Hexo 博客在 deploy 时，默认使用的是 Git全局用户。近期因为个人需要，在一台PC上配置了多个 git账户（取消了全局用户设置），导致 执行 <code>hexo d</code> 时报错，提示需要配置用户名。</p>
-<p>因此，我们需要  “为 Hexo 博客单独配置指定的 git 用户” 。不过网上的教程大部分都是设置全局用户的方法，在一番折腾之后，我终于找到了的解决方案，就此分享一下。</p>
-<p>解决方法其实很简单：</p>
+            <ol>
+<li>安全性设置<br>例如: 防火墙、SSH、SELinux</li>
+<li>安装建站环境<br><em>可以用 宝塔面板 解决</em></li>
+<li>建站具体配置</li>
+<li>设置自动备份</li>
+<li>其他一些自己想干的事情</li>
+</ol>
+<h3 id="系统信息与状态"><a href="#系统信息与状态" class="headerlink" title="系统信息与状态"></a>系统信息与状态</h3><p>系统内存占用信息: <code>free</code></p>
+<p>各种资源使用情况: <code>top</code></p>
+<ul>
+<li><code>-p [PID]</code> 用于指定进程</li>
+<li>按下 <code>H</code> 可以查看线程</li>
+</ul>
+<p>查看进程: <code>ps -ef</code></p>
 ...
             
-            <span class="read-more"><a href="/2020/04/09/hexo-d-1/" title="查看全文" class="posttitle">查看全文</a>
+            <span class="read-more"><a href="/2020/04/14/vps-and-centos/" title="查看全文" class="posttitle">查看全文</a>
                 <b class="iconfont icon-arrow-right- gradient-text"></b></span>
         </div>
     </div>
@@ -194,6 +205,58 @@
 
     <div id="primary">
         
+<div class="post" id="post">
+    <div class="post-cover animated fadeIn" style="
+            background-image:
+            radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+            url(/img/welcome-cover.jpg);">
+    </div>
+    <div class="else">
+        <p class="animated fadeInDown">
+            
+                <a href="/categories/Technology">
+                  <b>「 </b>TECHNOLOGY<b> 」</b>
+                </a>
+            
+            四月 09, 2020
+        </p>
+        <h3 class="post-title animated fadeInDown"><a href="/2020/04/09/hexo-git-user/" title="不想使用全局用户？教你为Hexo博客单独配置指定的git用户" class="posttitle">不想使用全局用户？教你为Hexo博客单独配置指定的git用户</a></h3>
+        
+            <p class="post-count animated fadeInDown">
+                
+                    <span>
+                        <b class="iconfont icon-text2"></b> <i>文章字数</i>
+                        1.5k
+                    </span>
+                
+                
+                    <span>
+                        <b class="iconfont icon-timer__s"></b> <i>阅读约需</i>
+                        1 mins.
+                    </span>
+                
+                
+            </p>
+            
+                <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+            
+        
+        <div class="md-content animated fadeIn">
+            
+                <p>众所周知，Hexo 博客在 deploy 时，默认使用的是 Git全局用户。近期因为个人需要，在一台PC上配置了多个 git账户（取消了全局用户设置），导致 执行 <code>hexo d</code> 时报错，提示需要配置用户名。</p>
+<p>因此，我们需要  “为 Hexo 博客单独配置指定的 git 用户” 。不过网上的教程大部分都是设置全局用户的方法，在一番折腾之后，我终于找到了的解决方案，就此分享一下。</p>
+<p>解决方法其实很简单：</p>
+<ol>
+<li><p>首先，打开hexo博客所在的本地文件夹</p>
+</li>
+<li><p>打开此目录下 <code>.deploy_git/.git/</code>  文件夹...</p></li></ol>
+            
+            <span class="read-more"><a href="/2020/04/09/hexo-git-user/" title="查看全文" class="posttitle">查看全文</a> <b class="iconfont icon-arrow-right- gradient-text"></b></span>
+        </div>
+    </div>
+</div>
+
+
 <div class="post" id="post">
     <div class="post-cover animated fadeIn" style="
             background-image:

@@ -2,9 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://hui-shao.github.io/2020/04/09/hexo-d-1/</loc>
+    <loc>http://hui-shao.github.io/2020/04/09/hexo-git-user/</loc>
     
-    <lastmod>2020-04-10T12:38:37.461Z</lastmod>
+    <lastmod>2020-04-28T11:00:43.298Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://hui-shao.github.io/2020/04/28/NetRed/</loc>
+    
+    <lastmod>2020-04-28T06:47:07.199Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://hui-shao.github.io/2020/04/14/vps-and-centos/</loc>
+    
+    <lastmod>2020-04-28T05:04:39.580Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://hui-shao.github.io/2020/03/23/Hexo-Deploy-Key-git/</loc>
+    
+    <lastmod>2020-04-28T04:04:49.754Z</lastmod>
     
   </url>
   
@@ -12,13 +33,6 @@
     <loc>http://hui-shao.github.io/2020/04/09/google-register/</loc>
     
     <lastmod>2020-04-09T02:25:49.167Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://hui-shao.github.io/2020/03/23/Hexo-Deploy-Key-git/</loc>
-    
-    <lastmod>2020-03-23T03:28:42.690Z</lastmod>
     
   </url>
   
