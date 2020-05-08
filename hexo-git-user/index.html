@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
+<!DOCTYPE html><html lang="zh-CN"><head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
@@ -17,23 +15,24 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"hui-shao.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"hui-shao.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="互联网时代，“成名”的门槛不断降低。一方面，这给了更多人去接触世界、开拓视野的机会；然而另一方面，在“网红”圈子里也出现的种种现象也越来越引发我们的担忧。">
+  <meta name="description" content="起因众所周知，Hexo 博客在 deploy 时，默认使用的是 Git全局用户。近期因为个人需要，在一台PC上配置了多个 git账户（取消了全局用户设置），导致 执行 hexo d 时报错，提示需要配置用户名。 因此，我们需要  “为 Hexo 博客单独配置指定的 git 用户” 。不过网上的教程大部分都是设置全局用户的方法，在一番折腾之后，我终于找到了的解决方案，就此分享一下。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="谈谈流量追捧之下的“网红”之风">
-<meta property="og:url" content="https://hui-shao.github.io/2020/04/28/NetRed/index.html">
-<meta property="og:site_name" content="Hui-Shao&#39;s Blog">
-<meta property="og:description" content="互联网时代，“成名”的门槛不断降低。一方面，这给了更多人去接触世界、开拓视野的机会；然而另一方面，在“网红”圈子里也出现的种种现象也越来越引发我们的担忧。">
+<meta property="og:title" content="不想使用全局用户？教你为Hexo博客单独配置指定的git用户">
+<meta property="og:url" content="https://hui-shao.github.io/hexo-git-user/index.html">
+<meta property="og:site_name" content="Hui-Shao's Blog">
+<meta property="og:description" content="起因众所周知，Hexo 博客在 deploy 时，默认使用的是 Git全局用户。近期因为个人需要，在一台PC上配置了多个 git账户（取消了全局用户设置），导致 执行 hexo d 时报错，提示需要配置用户名。 因此，我们需要  “为 Hexo 博客单独配置指定的 git 用户” 。不过网上的教程大部分都是设置全局用户的方法，在一番折腾之后，我终于找到了的解决方案，就此分享一下。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-04-28T02:13:23.000Z">
-<meta property="article:modified_time" content="2020-05-07T17:30:02.386Z">
+<meta property="article:published_time" content="2020-04-09T10:57:07.000Z">
+<meta property="article:modified_time" content="2020-05-07T17:30:34.994Z">
 <meta property="article:author" content="hui-shao">
-<meta property="article:tag" content="Comments">
+<meta property="article:tag" content="Hexo">
+<meta property="article:tag" content="Git">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://hui-shao.github.io/2020/04/28/NetRed/">
+<link rel="canonical" href="https://hui-shao.github.io/hexo-git-user/">
 
 
 <script id="page-configurations">
@@ -46,7 +45,7 @@
   };
 </script>
 
-  <title>谈谈流量追捧之下的“网红”之风 | Hui-Shao's Blog</title>
+  <title>不想使用全局用户？教你为Hexo博客单独配置指定的git用户 | Hui-Shao's Blog</title>
   
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161423196-1"></script>
     <script>
@@ -59,6 +58,15 @@
     </script>
 
 
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?dbd42c0b2cd9ab3967db5532cb8341f8";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -177,7 +185,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://hui-shao.github.io/2020/04/28/NetRed/">
+    <link itemprop="mainEntityOfPage" href="https://hui-shao.github.io/hexo-git-user/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -190,7 +198,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          谈谈流量追捧之下的“网红”之风
+          不想使用全局用户？教你为Hexo博客单独配置指定的git用户
         </h1>
 
         <div class="post-meta">
@@ -200,14 +208,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2020-04-28 10:13:23" itemprop="dateCreated datePublished" datetime="2020-04-28T10:13:23+08:00">2020-04-28</time>
+              <time title="创建时间：2020-04-09 18:57:07" itemprop="dateCreated datePublished" datetime="2020-04-09T18:57:07+08:00">2020-04-09</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-05-08 01:30:02" itemprop="dateModified" datetime="2020-05-08T01:30:02+08:00">2020-05-08</time>
+                <time title="修改时间：2020-05-08 01:30:34" itemprop="dateModified" datetime="2020-05-08T01:30:34+08:00">2020-05-08</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -215,7 +223,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Jottings/" itemprop="url" rel="index"><span itemprop="name">Jottings</span></a>
+                  <a href="/categories/Technology/" itemprop="url" rel="index"><span itemprop="name">Technology</span></a>
                 </span>
             </span>
 
@@ -235,8 +243,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/04/28/NetRed/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/04/28/NetRed/" itemprop="commentCount"></span>
+    <a title="valine" href="/hexo-git-user/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/hexo-git-user/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -246,13 +254,13 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.2k</span>
+              <span>690</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                <span class="post-meta-item-text">阅读时长 ≈</span>
               <span>1 分钟</span>
             </span>
 
@@ -265,45 +273,38 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p style="text-indent:2em">
-互联网时代，“成名”的门槛不断降低。一方面，这给了更多人去接触世界、开拓视野的机会；然而另一方面，在“网红”圈子里也出现的种种现象也越来越引发我们的担忧。
-</p>
+        <h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>众所周知，Hexo 博客在 deploy 时，默认使用的是 Git全局用户。近期因为个人需要，在一台PC上配置了多个 git账户（取消了全局用户设置），导致 执行 <code>hexo d</code> 时报错，提示需要配置用户名。</p>
+<p>因此，我们需要  “为 Hexo 博客单独配置指定的 git 用户” 。不过网上的教程大部分都是设置全局用户的方法，在一番折腾之后，我终于找到了的解决方案，就此分享一下。</p>
 <a id="more"></a>
-<p style="text-indent:2em">
-近日，一位四年前因盗窃入狱的窃贼出狱时，竟引来三十多家网红公司竞相签约。仅仅因为多年前一席令人匪夷所思的话语，就差点成为了“网红”。这实在令人大跌眼镜，“感慨万千”。
-</p>
 
-<p style="text-indent:2em">
-如此一位文盲、窃贼，劣迹斑斑，不费吹灰之力，就有一堆人，将巨额钱财捧到眼前；而一个普通人寒窗十载，认真工作几十年，都无法触及这个数字。为什么别人不努力就能比自己拼命换来的生活还要好？这不禁让有些人怀疑：若是这样就能得到“财富密码”，那么努力和劳动的意义何在？
-</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>解决方法其实很简单：</p>
+<ol>
+<li><p>首先，打开hexo博客所在的本地文件夹</p>
+</li>
+<li><p>打开此目录下 <code>.deploy_git/.git/</code>  文件夹（.git 为隐藏目录）。另外需要注意，打开的一定是在 “.deploy_key” 目录下的 “.git” 文件夹，外层的 “.git” 文件夹与此无关，即使修改也没有作用。</p>
+</li>
+<li><p>用文本编辑器编辑该目录下的 <code>config</code> 文件，新增如下配置：</p>
+<figure class="highlight tex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[user]</span><br><span class="line">	name = YourUserName</span><br><span class="line">	email = example@example.com</span><br></pre></td></tr></tbody></table></figure>
 
-<p style="text-indent:2em">
-的确，当知识不被重视，当努力的意义被解体，当炒作意味着捷径，当吸引眼球就意味着金钱如雪花飞来之时......试问，还有谁愿意脚踏实地去努力工作？窃·格拉瓦，一个畅行于底层生活，小学毕业的人、因为几句话就红遍全网、赚了几百万、买了大房子、开上了豪车、不用再打工。这样消极的态度，扭曲的观念，若是被大肆宣传，成为了无数人前赴后继的诱饵，岂不污浊了清正之风？
-</p>
-
-<p style="text-indent:2em">
-我们知道，网红需要流量，但不需要被歪曲的流量。周某因盗窃入狱，这样的违法行为，应该受到的是舆论的谴责和法律的惩罚。因此不论是大众的盲目追捧，和还是些公司的蓄意包装，这样的行为都是在挑战的是我们的道德底线，法律底线，挑战的是我们赖以前行的最基本的社会秩序。这类行为应该被叫停，这类网红应该被抵制。
-</p>
-
-<p style="text-indent:2em">
-我们更清楚，大众需要网红，但是需要的是正能量有价值的“网红”。钟南山院士，在抗击疫情的鏖战之中，身先士卒，无私奉献，赢得了广大群众的尊敬；珠峰斗士夏伯渝老人，历尽艰险，百折不挠，终究攀上峰顶，他的光辉事迹广为传颂。相比较之下，这才是我们这个时代当之无愧的“网红”——能给我们启示、鼓舞，能给我们精神力量的正向价值。
-</p>
-
-<p style="text-indent:2em">
-正如林清玄所言：“改变表象最好的方法，是从内在里改革”。我们也需要认识到，扭曲的网红风气只是“表象”，而其“内在”也许在于我们自身。撇开刻意的宣传，网红之所以能成为网红，其根本还在于大众的猎奇心理。如果人人都能自觉抵制不良文化，那么这样所谓的网红在互联网世界里根本不会有立足之地。
-</p>
-
-<p style="text-indent:2em">
-将丑陋美化，将人性践踏，将底线抛开。当我们在“享受”这些网络扭曲的狂欢时，我们承受的是正在或即将由我们买单的恶果。如果有一天，我们习惯了这种是非曲直、天马行空，那时，我们也许就成为了罪恶的一份子。因此，我们也必须学会明辨是非，理性思考，在投入网络的大潮之前，客观地看待事物。
-</p>
-
-<p style="text-indent:2em">
-当然，需要注意的是，网红现象的产生是时代的产物，我们也并不是说一个刑满释放的小偷没有资格和时代同行，但前提是他能够悬崖勒马，改过自新。我们不难想象，倘若群众的目光能从无意义的追捧之上转移到对正义的追求，对人性的思考之上，那么我们的社会将更加积极向上。
-</p>
-
-<p style="text-indent:2em">
-“水止则能照，衡定则能称”。唯有在追捧的热浪之中，做到心如“水止”，思如“衡定”，保持沉着和理性，才能走得更长、更远。
-</p>
+<p>注意使用你自己的用户名和邮箱替换对应值</p>
+</li>
+<li><p>保存配置文件并退出.</p>
+</li>
+</ol>
+<p>大功告成</p>
+<h2 id="期间踩坑"><a href="#期间踩坑" class="headerlink" title="期间踩坑"></a>期间踩坑</h2><ol>
+<li><p>首先尝试了第一种方法，使用脚本解决，“在hexo deploy之前将全局user更改，deploy完成之后再将user改回。” 不过感觉不太完美</p>
+</li>
+<li><p>然后试了网上另一种方法，删除了 “.deploy_git” 目录，问题确实解决了，但是提交记录全没了（还好删之前有备份）</p>
+</li>
+<li><p>编辑 “config” 时，编辑成博客根目录下的 “.git/config” 导致修改不起效</p>
+</li>
+<li><p>修改了 博客根目录下 “_config.yml” 文件，在其中 <code>deploy</code>部分添加了如下配置：</p>
+<figure class="highlight tex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">name: YourUserName</span><br><span class="line">email: example@example.com</span><br></pre></td></tr></tbody></table></figure>
+<p>然而，Windows平台下这样做并没有什么用…（据说 Linux平台可以使用此方法）</p>
+</li>
+</ol>
+<p>p.s. 上述部分方法来自 Github 上 Hexo 项目的 <a href="https://github.com/hexojs/hexo/issues/2125" target="_blank" rel="noopener">issue #2125 能否hexo deploy 时指定git账户</a> </p>
 
     </div>
 
@@ -319,7 +320,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://hui-shao.github.io/2020/04/28/NetRed/" title="谈谈流量追捧之下的“网红”之风">https://hui-shao.github.io/2020/04/28/NetRed/</a>
+    <a href="https://hui-shao.github.io/hexo-git-user/" title="不想使用全局用户？教你为Hexo博客单独配置指定的git用户">https://hui-shao.github.io/hexo-git-user/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -331,7 +332,8 @@
       <footer class="post-footer">
           
           <div class="post-tags">
-              <a href="/tags/Comments/" rel="tag"><i class="fa fa-tag"></i> Comments</a>
+              <a href="/tags/Hexo/" rel="tag"><i class="fa fa-tag"></i> Hexo</a>
+              <a href="/tags/Git/" rel="tag"><i class="fa fa-tag"></i> Git</a>
           </div>
 
         
@@ -340,12 +342,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/04/14/vps-and-centos/" rel="prev" title="VPS部署 & Centos 常用指令">
-      <i class="fa fa-chevron-left"></i> VPS部署 & Centos 常用指令
+    <a href="/google-register/" rel="prev" title="“此电话号码无法用于进行验证”？解决Google 账户注册时中国手机号的验证问题">
+      <i class="fa fa-chevron-left"></i> “此电话号码无法用于进行验证”？解决Google 账户注册时中国手机号的验证问题
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/05/07/MMA12-KeyGenerator/" rel="next" title="Wolfram Mathematica 12.x 注册码在线生成器">
-      Wolfram Mathematica 12.x 注册码在线生成器 <i class="fa fa-chevron-right"></i>
+    <a href="/vps-and-centos/" rel="next" title="VPS部署 & Centos 常用指令">
+      VPS部署 & Centos 常用指令 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -406,13 +408,13 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#起因"><span class="nav-number">1.</span> <span class="nav-text">起因</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#解决方案"><span class="nav-number">2.</span> <span class="nav-text">解决方案</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#期间踩坑"><span class="nav-number">3.</span> <span class="nav-text">期间踩坑</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="hui-shao"
-      src="/images/avatar.jpg">
+    <img class="site-author-image" itemprop="image" alt="hui-shao" src="/images/avatar.jpg">
   <p class="site-author-name" itemprop="name">hui-shao</p>
   <div class="site-description" itemprop="description">hui-shao的博客 创造与分享</div>
 </div>
@@ -441,16 +443,16 @@
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/hui-shao" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;hui-shao" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+        <a href="https://github.com/hui-shao" title="GitHub → https://github.com/hui-shao" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
         <a href="mailto:xhzrzb@gmail.com" title="E-Mail → mailto:xhzrzb@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://stackoverflow.com/users/13119393/hui-shao" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;users&#x2F;13119393&#x2F;hui-shao" rel="noopener" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>StackOverflow</a>
+        <a href="https://stackoverflow.com/users/13119393/hui-shao" title="StackOverflow → https://stackoverflow.com/users/13119393/hui-shao" rel="noopener" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>StackOverflow</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://weibo.com/hui03" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;hui03" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+        <a href="https://weibo.com/hui03" title="Weibo → https://weibo.com/hui03" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
       </span>
   </div>
 
@@ -474,7 +476,7 @@
 
 <div class="copyright">
   
-  &copy; 
+  © 
   <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -538,7 +540,7 @@ setInterval("createtime()",250);
   </div>
 
   
-  <script color='' opacity='' zIndex='' count='' src="/lib/canvas-nest/canvas-nest-nomobile.min.js"></script>
+  <script color opacity zindex count src="/lib/canvas-nest/canvas-nest-nomobile.min.js"></script>
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
@@ -557,6 +559,15 @@ setInterval("createtime()",250);
 
 
   
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
 
 
 
@@ -623,7 +634,14 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
 
 
 
+
   <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
 
-</body>
-</html>
+
+
+
+  <script type="text/javascript" src="/js/crash_cheat.js"></script>
+
+
+
+<script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>

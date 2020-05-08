@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
+<!DOCTYPE html><html lang="zh-CN"><head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
@@ -17,14 +15,14 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"hui-shao.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"default"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+    var CONFIG = {"hostname":"hui-shao.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"mac"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
   <meta name="description" content="Why?关于 ssh-key 与 deploy-keyssh-key 是用于认证 Github 账户的密钥，对所有的 repository (下文简写为 repo ) 都有操作权限；而 deploy-key 只允许对特定 repo 进行操作，每个 repo 的 deploy key 都是独有的，其他 repo 无法使用相同的 key。 下面是 Github 官方的说明：  Deploy key">
 <meta property="og:type" content="article">
 <meta property="og:title" content="为Hexo博客仓库配置独立的Deploy Key（git）">
-<meta property="og:url" content="https://hui-shao.github.io/2020/03/23/hexo-Deploy-Key-git/index.html">
-<meta property="og:site_name" content="Hui-Shao&#39;s Blog">
+<meta property="og:url" content="https://hui-shao.github.io/hexo-Deploy-Key-git/index.html">
+<meta property="og:site_name" content="Hui-Shao's Blog">
 <meta property="og:description" content="Why?关于 ssh-key 与 deploy-keyssh-key 是用于认证 Github 账户的密钥，对所有的 repository (下文简写为 repo ) 都有操作权限；而 deploy-key 只允许对特定 repo 进行操作，每个 repo 的 deploy key 都是独有的，其他 repo 无法使用相同的 key。 下面是 Github 官方的说明：  Deploy key">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://res.cloudinary.com/hui-shao/image/upload/v1584877174/blog/cover/cover_1200x500.jpg">
@@ -37,7 +35,7 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://res.cloudinary.com/hui-shao/image/upload/v1584877174/blog/cover/cover_1200x500.jpg">
 
-<link rel="canonical" href="https://hui-shao.github.io/2020/03/23/hexo-Deploy-Key-git/">
+<link rel="canonical" href="https://hui-shao.github.io/hexo-Deploy-Key-git/">
 
 
 <script id="page-configurations">
@@ -63,6 +61,15 @@
     </script>
 
 
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?dbd42c0b2cd9ab3967db5532cb8341f8";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -181,7 +188,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://hui-shao.github.io/2020/03/23/hexo-Deploy-Key-git/">
+    <link itemprop="mainEntityOfPage" href="https://hui-shao.github.io/hexo-Deploy-Key-git/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -239,8 +246,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2020/03/23/hexo-Deploy-Key-git/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2020/03/23/hexo-Deploy-Key-git/" itemprop="commentCount"></span>
+    <a title="valine" href="/hexo-Deploy-Key-git/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/hexo-Deploy-Key-git/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -256,7 +263,7 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                <span class="post-meta-item-text">阅读时长 ≈</span>
               <span>1 分钟</span>
             </span>
 
@@ -269,7 +276,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p><img src="https://res.cloudinary.com/hui-shao/image/upload/v1584877174/blog/cover/cover_1200x500.jpg" alt=""></p>
+        <p><img src="https://res.cloudinary.com/hui-shao/image/upload/v1584877174/blog/cover/cover_1200x500.jpg" alt></p>
 <h2 id="Why"><a href="#Why" class="headerlink" title="Why?"></a>Why?</h2><h3 id="关于-ssh-key-与-deploy-key"><a href="#关于-ssh-key-与-deploy-key" class="headerlink" title="关于 ssh-key 与 deploy-key"></a>关于 ssh-key 与 deploy-key</h3><p>ssh-key 是用于认证 Github 账户的密钥，对所有的 repository (下文简写为 repo ) 都有操作权限；而 deploy-key 只允许对特定 repo 进行操作，每个 repo 的 deploy key 都是独有的，其他 repo 无法使用相同的 key。</p>
 <p>下面是 Github 官方的说明：</p>
 <blockquote>
@@ -281,18 +288,18 @@
 
 <h2 id="What-to-do"><a href="#What-to-do" class="headerlink" title="What to do?"></a>What to do?</h2><h3 id="创建-deploy-key"><a href="#创建-deploy-key" class="headerlink" title="创建 deploy key"></a>创建 deploy key</h3><p><em>p.s. 以下演示均在 Windows 平台完成；终端均为 “cmd”</em></p>
 <p>打开终端，切换到你的账户的主文件夹：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /d <span class="string">"%HOMEDRIVE%%HOMEPATH%"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> /d <span class="string">"%HOMEDRIVE%%HOMEPATH%"</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>然后输入命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -f <span class="string">".\.ssh\deploy_key_blog"</span> -C <span class="string">"用于区分key的注释"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -f <span class="string">".\.ssh\deploy_key_blog"</span> -C <span class="string">"用于区分key的注释"</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p><strong>其中 <code>deploy_key_blog</code> 是新密钥的名字，可以自己修改，不要和已有密钥重名。</strong></p>
 <p>回车之后，一般会出现：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase):</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Generating public/private rsa key pair.</span><br><span class="line">Enter passphrase (empty <span class="keyword">for</span> no passphrase):</span><br></pre></td></tr></tbody></table></figure>
 
 <p>这个是让你为私钥设置密码的，不需要的话什么都不用输，“连续按两次回车” 即可进入下一环节。</p>
 <p>如果成功，你会看到类似这样的输出：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Your identification has been saved <span class="keyword">in</span> .\.ssh\deploy_key_blog.</span><br><span class="line">Your public key has been saved <span class="keyword">in</span> .\.ssh\deploy_key_blog.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">SHA256: “这里是一大串字符”   example@example.com  <span class="comment"># 这里是你的邮箱</span></span><br><span class="line">The key<span class="string">'s randomart image is:</span></span><br><span class="line"><span class="string">+---[RSA 2048]----+</span></span><br><span class="line"><span class="string"># 这中间是一张随机图像</span></span><br><span class="line"><span class="string"># 这中间是一张随机图像</span></span><br><span class="line"><span class="string"># 这中间是一张随机图像</span></span><br><span class="line"><span class="string">+----[SHA256]-----+</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Your identification has been saved <span class="keyword">in</span> .\.ssh\deploy_key_blog.</span><br><span class="line">Your public key has been saved <span class="keyword">in</span> .\.ssh\deploy_key_blog.pub.</span><br><span class="line">The key fingerprint is:</span><br><span class="line">SHA256: “这里是一大串字符”   example@example.com  <span class="comment"># 这里是你的邮箱</span></span><br><span class="line">The key<span class="string">'s randomart image is:</span></span><br><span class="line"><span class="string">+---[RSA 2048]----+</span></span><br><span class="line"><span class="string"># 这中间是一张随机图像</span></span><br><span class="line"><span class="string"># 这中间是一张随机图像</span></span><br><span class="line"><span class="string"># 这中间是一张随机图像</span></span><br><span class="line"><span class="string">+----[SHA256]-----+</span></span><br></pre></td></tr></tbody></table></figure>
 
 <p>这样，一个 deoloy key 就创建完成了</p>
 <h3 id="部署-deploy-key"><a href="#部署-deploy-key" class="headerlink" title="部署 deploy key"></a>部署 deploy key</h3><ol>
@@ -307,23 +314,23 @@
 <p>也可以新建一个文本文档，然后重命名为 config （没有后缀名）</p>
 </li>
 <li><p>用文本编辑工具打开 config ，写入下列内容：</p>
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># 第一个账号(默认使用的账号)，一般不用更改</span><br><span class="line">Host github.com</span><br><span class="line">	HostName github.com</span><br><span class="line">	User git</span><br><span class="line">	IdentityFile ~/.ssh/id_rsa</span><br><span class="line">	</span><br><span class="line"># 第二个新账号，其中"hexo"为前缀名，可以任意设置，要记住，后面需要用到</span><br><span class="line"># 最后一行的 deploy_key_blog 是你创建的新密钥的名称（根据实际情况替换）</span><br><span class="line">Host xxxxxx.github.com</span><br><span class="line">	HostName github.com</span><br><span class="line">	User git</span><br><span class="line">	IdentityFile ~/.ssh/deploy_key_blog</span><br></pre></td></tr></table></figure>
+<figure class="highlight tex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"># 第一个账号(默认使用的账号)，一般不用更改</span><br><span class="line">Host github.com</span><br><span class="line">	HostName github.com</span><br><span class="line">	User git</span><br><span class="line">	IdentityFile ~/.ssh/id_rsa</span><br><span class="line">	</span><br><span class="line"># 第二个新账号，其中"hexo"为前缀名，可以任意设置，要记住，后面需要用到</span><br><span class="line"># 最后一行的 deploy_key_blog 是你创建的新密钥的名称（根据实际情况替换）</span><br><span class="line">Host xxxxxx.github.com</span><br><span class="line">	HostName github.com</span><br><span class="line">	User git</span><br><span class="line">	IdentityFile ~/.ssh/deploy_key_blog</span><br></pre></td></tr></tbody></table></figure>
 </li>
 <li><p>保存 / 另存为  ，编码选择 “UTF-8 ” 。</p>
 </li>
 <li><p>打开终端 输入下列指令（其中 “hexo” 是你刚刚设置的 Host）:</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@hexo.github.com</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@hexo.github.com</span><br></pre></td></tr></tbody></table></figure>
 
 <p>如果显示下列信息，表示配置成功：</p>
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi 你的用户名/repo名! You've successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></table></figure>
+<figure class="highlight tex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi 你的用户名/repo名! You've successfully authenticated, but GitHub does not provide shell access.</span><br></pre></td></tr></tbody></table></figure>
 
 </li>
 </ol>
 <h3 id="修改配置-config-yml"><a href="#修改配置-config-yml" class="headerlink" title="修改配置 _config.yml"></a>修改配置 _config.yml</h3><ol>
 <li><p>用文本编辑器打开 博客本地 repo 中根目录下的 _config.yml ，修改 deploy 部分如下（其中 ”hexo.github.com“ 是你刚刚设置的 Host）：</p>
-<figure class="highlight tex"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@hexo.github.com:你的用户名/你的用户名.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+<figure class="highlight tex"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repository: git@hexo.github.com:你的用户名/你的用户名.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></tbody></table></figure>
 </li>
-<li><p>打开终端，切换工作路径为 “博客本地 repo 的根目录“ ，输入 <code>hexo g &amp;&amp; hexo d</code> 即可提交。</p>
+<li><p>打开终端，切换工作路径为 “博客本地 repo 的根目录“ ，输入 <code>hexo g && hexo d</code> 即可提交。</p>
 </li>
 </ol>
 <h2 id="End"><a href="#End" class="headerlink" title="End"></a>End</h2><p>参考资料：</p>
@@ -346,7 +353,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="https://hui-shao.github.io/2020/03/23/hexo-Deploy-Key-git/" title="为Hexo博客仓库配置独立的Deploy Key（git）">https://hui-shao.github.io/2020/03/23/hexo-Deploy-Key-git/</a>
+    <a href="https://hui-shao.github.io/hexo-Deploy-Key-git/" title="为Hexo博客仓库配置独立的Deploy Key（git）">https://hui-shao.github.io/hexo-Deploy-Key-git/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -369,11 +376,11 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2020/03/20/hello-world/" rel="prev" title="Hello World">
+    <a href="/hello-world/" rel="prev" title="Hello World">
       <i class="fa fa-chevron-left"></i> Hello World
     </a></div>
       <div class="post-nav-item">
-    <a href="/2020/04/09/google-register/" rel="next" title="“此电话号码无法用于进行验证”？解决Google 账户注册时中国手机号的验证问题">
+    <a href="/google-register/" rel="next" title="“此电话号码无法用于进行验证”？解决Google 账户注册时中国手机号的验证问题">
       “此电话号码无法用于进行验证”？解决Google 账户注册时中国手机号的验证问题 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
@@ -441,8 +448,7 @@
 
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <img class="site-author-image" itemprop="image" alt="hui-shao"
-      src="/images/avatar.jpg">
+    <img class="site-author-image" itemprop="image" alt="hui-shao" src="/images/avatar.jpg">
   <p class="site-author-name" itemprop="name">hui-shao</p>
   <div class="site-description" itemprop="description">hui-shao的博客 创造与分享</div>
 </div>
@@ -471,16 +477,16 @@
 </div>
   <div class="links-of-author motion-element">
       <span class="links-of-author-item">
-        <a href="https://github.com/hui-shao" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;hui-shao" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+        <a href="https://github.com/hui-shao" title="GitHub → https://github.com/hui-shao" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
       </span>
       <span class="links-of-author-item">
         <a href="mailto:xhzrzb@gmail.com" title="E-Mail → mailto:xhzrzb@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://stackoverflow.com/users/13119393/hui-shao" title="StackOverflow → https:&#x2F;&#x2F;stackoverflow.com&#x2F;users&#x2F;13119393&#x2F;hui-shao" rel="noopener" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>StackOverflow</a>
+        <a href="https://stackoverflow.com/users/13119393/hui-shao" title="StackOverflow → https://stackoverflow.com/users/13119393/hui-shao" rel="noopener" target="_blank"><i class="fab fa-stack-overflow fa-fw"></i>StackOverflow</a>
       </span>
       <span class="links-of-author-item">
-        <a href="https://weibo.com/hui03" title="Weibo → https:&#x2F;&#x2F;weibo.com&#x2F;hui03" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
+        <a href="https://weibo.com/hui03" title="Weibo → https://weibo.com/hui03" rel="noopener" target="_blank"><i class="fab fa-weibo fa-fw"></i>Weibo</a>
       </span>
   </div>
 
@@ -504,7 +510,7 @@
 
 <div class="copyright">
   
-  &copy; 
+  © 
   <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
@@ -568,7 +574,7 @@ setInterval("createtime()",250);
   </div>
 
   
-  <script color='' opacity='' zIndex='' count='' src="/lib/canvas-nest/canvas-nest-nomobile.min.js"></script>
+  <script color opacity zindex count src="/lib/canvas-nest/canvas-nest-nomobile.min.js"></script>
   <script src="/lib/anime.min.js"></script>
   <script src="/lib/velocity/velocity.min.js"></script>
   <script src="/lib/velocity/velocity.ui.min.js"></script>
@@ -587,6 +593,15 @@ setInterval("createtime()",250);
 
 
   
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
 
 
 
@@ -653,7 +668,14 @@ NexT.utils.loadComments(document.querySelector('#valine-comments'), () => {
 
 
 
+
   <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
 
-</body>
-</html>
+
+
+
+  <script type="text/javascript" src="/js/crash_cheat.js"></script>
+
+
+
+<script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
