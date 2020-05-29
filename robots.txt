@@ -11,5 +11,5 @@ Disallow: /fonts/
 Disallow: /vendors/
 Disallow: /fancybox/
 
-Sitemap: https://hui-shao.github.io/sitemap.xml
-Sitemap: https://hui-shao.github.io/baidusitemap.xml
+Sitemap: https://hui-shao.cn/sitemap.xml
+Sitemap: https://hui-shao.cn/baidusitemap.xml
