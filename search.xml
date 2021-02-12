@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>Pr导入ass字幕的解决方案——将ass字幕转为mov视频格式</title>
+      <link href="/ass-to-mov/"/>
+      <url>/ass-to-mov/</url>
+      
+        <content type="html"><![CDATA[<html><head></head><body><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我们常常遇到需要将漂亮的ass字幕导入Pr的情况，然而Adobe是不支持直接导入ass字幕的。这里提供一种比较完美的解决方案，可以保持ass字幕原本的效果和特点。</p><a id="more"></a><!-- markdownlint-disable MD041 MD002--><h2 id="教程开始"><a href="#教程开始" class="headerlink" title="教程开始"></a>教程开始</h2><p>实际上，我们知道MOV格式视频是支持alaph通道的，可以通过此来实现“透明背景”。因此，我们只需要把ass字幕转换为背景透明的mov格式，然后导入到Pr即可。</p><p>（以Windows 平台为例）</p><ol><li><p>首先下载FFmpeg，官网下载地址：<a href="http://ffmpeg.org/download.html" target="_blank" rel="noopener">http://ffmpeg.org/download.html</a> ，如果较慢也可以寻找其他下载地址。</p></li><li><p>在 <code>ffmpeg.exe</code> 可执行文件所在的目录下，右键 - 新建文本文档 - 修改后缀为 Bat，在文件内粘贴如下内容，然后保存（ANSI编码方式）。</p><figure class="highlight shell"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">@echo off</span><br><span class="line">REM 功能：封装 ass字幕为mov格式（透明背景），支持导入Pr</span><br><span class="line">REM 作者：Hui-Shao</span><br><span class="line">REM 注意: 修改相应参数</span><br><span class="line"></span><br><span class="line">title 封装 ass字幕 为 mov By Hui-Shao</span><br><span class="line">echo.</span><br><span class="line">echo 请确认ass字幕文件位于脚本所在目录下, 并命名为 subtitle.ass</span><br><span class="line">echo 请确认你已经 右键-编辑并修改好该脚本文件的ffmpeg命令参数</span><br><span class="line">echo.</span><br><span class="line">pause</span><br><span class="line">cls</span><br><span class="line">cd /d "%~dp0"</span><br><span class="line">ffmpeg -y -f lavfi -i "color=color=black@0.0:size=1920x1080,format=rgba,subtitles=subtitle.ass:alpha=1" -c:v png -t "00:00:59.900" -r 60 -b:v 10M subtitle.mov -stats</span><br><span class="line">echo.</span><br><span class="line">pause</span><br></pre></td></tr></tbody></table></figure></li></ol><ol start="3"><li><p>将字幕文件重命名为 <code>subtitle.ass</code> ，复制到脚本文件所在目录。按照然后下列提示修改好ffmpeg命令参数，双击运行刚才的批处理文件即可。</p><p>参数说明：</p><table><thead><tr><th>参数</th><th>说明</th><th>备注</th></tr></thead><tbody><tr><td><code>size=1920x1080</code></td><td>设置输出视频尺寸</td><td>根据需要修改即可</td></tr><tr><td><code>-t "00:00:59.900"</code></td><td>设置输出视频的时长</td><td><strong>必须</strong>根据原字幕时长修改。否则可能导致字幕缺失。</td></tr><tr><td><code>-r 60</code></td><td>设置输出视频帧率</td><td>根据需要修改，无需设置删掉该参数即可</td></tr><tr><td><code>-b:v 10M</code></td><td>设置输出视频比特率</td><td>根据需要修改，无需设置删掉该参数即可。示例：<code>-b:v 1500K</code>  或  <code>-b:v 1.5M</code></td></tr></tbody></table></li></ol></body></html>]]></content>
+      
+      
+      <categories>
+          
+          <category> Technology </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Adobe </tag>
+            
+            <tag> Pr </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>南方周末新年献词合集(1997-2021)</title>
       <link href="/nfzm-new-year/"/>
       <url>/nfzm-new-year/</url>
